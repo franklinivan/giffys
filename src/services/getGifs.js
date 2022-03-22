@@ -6,5 +6,12 @@ export default function getGifs ({ keyword = 'gif' }) {
 
   return fetch(API_URL)
     .then(res => res.json())
-    .then(({ data }) => data)
+    .then(({ data }) => {
+      const gifs = data.map(gif => {
+        const { id, title, images } = gif
+        const { url } = images.downsized_medium
+        return { id, title, url }
+      })
+      return gifs
+    })
 }
