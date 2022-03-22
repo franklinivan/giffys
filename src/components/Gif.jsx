@@ -1,5 +1,4 @@
-export const Gif = ({ title, images }) => {
-  const { url } = images.downsized_medium
+export const Gif = ({ title, url }) => {
   return (
     <div>
       <h4>{title}</h4>
