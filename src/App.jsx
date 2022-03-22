@@ -1,16 +1,16 @@
-import { useState } from 'react'
 import { GifsForm } from './components/GifsForm'
 import { GifsList } from './components/GifsList'
+import { Route, Link } from 'wouter'
 import './App.css'
 
 function App () {
-  const [keyword, setKeyword] = useState('')
-
   return (
     <div className='App'>
       <section className='App-content'>
-        <GifsForm setKeyword={setKeyword} />
-        <GifsList keyword={keyword} />
+        <h4>Giffys</h4>
+        <GifsForm />
+        <Route path='/gif/:keyword' component={GifsList} />
+        <Link to='/gif/panda'>panda</Link>
       </section>
     </div>
   )

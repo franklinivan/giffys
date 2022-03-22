@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-export const GifsForm = ({ setKeyword }) => {
+export const GifsForm = () => {
   const [value, setValue] = useState('')
+  const [keyword, setKeyword] = useState('')
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -10,7 +11,7 @@ export const GifsForm = ({ setKeyword }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input onChange={e => setValue(e.target.value)} />
+      <input onChange={({ target }) => setValue(target.value)} />
       <button>search gif</button>
     </form>
   )
