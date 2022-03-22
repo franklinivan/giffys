@@ -7,7 +7,7 @@ export const ListOfGifs = ({ keyword = 'morty' }) => {
 
   useEffect(() => {
     getGifs({ keyword }).then(gifs => setGifs(gifs))
-  }, [])
+  }, [keyword])
 
   return (
     <div>
