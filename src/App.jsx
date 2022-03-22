@@ -1,25 +1,15 @@
 import { useState } from 'react'
 import { ListOfGifs } from './components/ListOfGifs'
 import './App.css'
+import { FormOfGif } from './components/FormOfGif'
 
 function App () {
-  const [keyword, setKeyword] = useState('rick')
-  const [value, setValue] = useState('')
-
-  const handleKeyword = e => setValue(e.target.value)
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    setKeyword(value)
-  }
+  const [keyword, setKeyword] = useState('')
 
   return (
     <div className='App'>
       <section className='App-content'>
-        <form onSubmit={handleSubmit}>
-          <input type='text' onChange={handleKeyword} value={value} />
-          <button>search gif</button>
-        </form>
+        <FormOfGif setKeyword={setKeyword} />
         <ListOfGifs keyword={keyword} />
       </section>
     </div>
