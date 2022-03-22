@@ -1,8 +1,66 @@
+.Gif-form {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+
+.Gif-form input {
+  outline: none;
+  padding: 3px 6px;
+}
+
+.Gif-form a {
+  align-self: center;
+  border-radius: 16px;
+  border: 1.5px solid #fff;
+  color: #eee;
+  font-size: 14px;
+  margin: 16px;
+  padding: 8px;
+  text-decoration: none;
+  width: 50%;
+  background: linear-gradient(164deg, #30c9a1, #9bc317, #1765c3, #552665);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  -o-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:19% 0%}
+  50%{background-position:82% 100%}
+  100%{background-position:19% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:19% 0%}
+  50%{background-position:82% 100%}
+  100%{background-position:19% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:19% 0%}
+  50%{background-position:82% 100%}
+  100%{background-position:19% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:19% 0%}
+  50%{background-position:82% 100%}
+  100%{background-position:19% 0%}
+}
+
+.Gif-list {
+  /* background-color: #552665; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
 .Gif {
+  /* background-color: #1765c3; */
   border-radius: 6px;
   border: 2px solid #eee;
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin: 16px;
+  width: 50%;
 }
