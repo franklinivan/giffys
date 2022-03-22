@@ -3,7 +3,7 @@ import { ListOfGifs } from './components/ListOfGifs'
 import './App.css'
 
 function App () {
-  const [keyword, setKeyword] = useState('')
+  const [keyword, setKeyword] = useState('rick')
   const [value, setValue] = useState('')
 
   const handleKeyword = e => setValue(e.target.value)
