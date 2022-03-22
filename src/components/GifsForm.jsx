@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const FormOfGif = ({ setKeyword }) => {
+export const GifsForm = ({ setKeyword }) => {
   const [value, setValue] = useState('')
 
   const handleSubmit = e => {

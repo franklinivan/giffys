@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ListOfGifs } from './components/ListOfGifs'
+import { GifsForm } from './components/GifsForm'
+import { GifsList } from './components/GifsList'
 import './App.css'
-import { FormOfGif } from './components/FormOfGif'
 
 function App () {
   const [keyword, setKeyword] = useState('')
@@ -9,8 +9,8 @@ function App () {
   return (
     <div className='App'>
       <section className='App-content'>
-        <FormOfGif setKeyword={setKeyword} />
-        <ListOfGifs keyword={keyword} />
+        <GifsForm setKeyword={setKeyword} />
+        <GifsList keyword={keyword} />
       </section>
     </div>
   )
