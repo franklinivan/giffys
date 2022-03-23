@@ -1,12 +1,15 @@
 import { GifsForm } from './components/GifsForm'
 import { GifsList } from './components/GifsList'
 import { GifDetails } from './components/GifDetails'
-import { Route } from 'wouter'
+import { Route, Link } from 'wouter'
 import './App.css'
 
 function App () {
   return (
     <div className='App'>
+      <header>
+        <Link to='/'>Home</Link>
+      </header>
       <section className='App-content'>
         <h4>Giffys</h4>
         <GifsForm />
