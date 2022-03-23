@@ -11,7 +11,7 @@ function App () {
         <h4>Giffys</h4>
         <GifsForm />
         <Route path='/gif/:keyword' component={GifsList} />
-        <Route path='/gif/detail/:id' component={GifDetails} />
+        <Route path='/gif/:keyword/:id' component={GifDetails} />
       </section>
     </div>
   )
