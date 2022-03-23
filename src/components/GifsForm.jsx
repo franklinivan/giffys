@@ -11,7 +11,9 @@ export const GifsForm = () => {
         onChange={({ target }) => setValue(target.value)} value={value}
         placeholder='...'
       />
-      <Link type='button' to={`/gif/${value}`}>search gifs</Link>
+      <Link onClick={() => setValue('')} to={`/gif/${value}`}>
+        search gifs
+      </Link>
     </div>
   )
 }
