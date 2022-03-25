@@ -9,7 +9,7 @@
   padding: 3px 6px;
 }
 
-.Gif-form a {
+.Gif-form button {
   align-self: center;
   border-radius: 16px;
   border: 1.5px solid #fff;
@@ -19,6 +19,7 @@
   padding: 8px;
   text-decoration: none;
   width: 50%;
+  cursor: pointer;
   background: linear-gradient(164deg, #30c9a1, #9bc317, #1765c3, #552665);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 7s ease infinite;

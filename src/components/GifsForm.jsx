@@ -1,26 +1,24 @@
 import { useState } from 'react'
-import { useLocation, Link } from 'wouter'
+import { useLocation } from 'wouter'
 import './Gif.css'
 
 export const GifsForm = () => {
-  const [value, setValue] = useState('')
+  const [keyword, setKeyword] = useState('')
   const [path, setLocation] = useLocation() // eslint-disable-line
 
   const handleSubmit = e => {
     e.preventDefault()
-    setLocation(`/gif/${value}`)
+    setLocation(`/gif/${keyword}`)
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <div className='Gif-form'>
         <input
-          onChange={({ target }) => setValue(target.value)} value={value}
+          onChange={({ target }) => setKeyword(target.value)} value={keyword}
           placeholder='...'
         />
-        <Link onClick={() => setValue('')} to={`/gif/${value}`}>
-          search gifs
-        </Link>
+        <button>search gifs</button>
       </div>
     </form>
   )
