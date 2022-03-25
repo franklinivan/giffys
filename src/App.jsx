@@ -9,7 +9,7 @@ function App () {
     <div className='App'>
       <section className='App-content'>
         <Link to='/'>
-          Home
+          <h3>home</h3>
         </Link>
         <Route path='/' component={Home} />
         <Route path='/gif/:keyword' component={SearchResults} />
