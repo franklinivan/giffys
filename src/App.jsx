@@ -16,7 +16,7 @@ function App () {
     <StaticContext.Provider value={CONTEXT}>
       <section className='App-content'>
         <Link to='/'>
-          <h3>home</h3>
+          <h3>Home</h3>
         </Link>
         <Route path='/' component={Home} />
         <Route path='/gif/:keyword' component={SearchResults} />
