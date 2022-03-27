@@ -1,4 +1,4 @@
-import { GifsForm } from '../../components/GifsForm'
+import { GifsForm } from '@/components/GifsForm'
 
 export default function Home () {
   return (
