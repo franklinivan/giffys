@@ -1,0 +1,25 @@
+.Gif-trend {
+  border-radius: 5px;
+  padding: 16px;
+  display: block;
+  text-align: left;
+  width: 90%;
+}
+
+.Gif-trend h4 {
+  margin: 10px 0px;
+  color: #eee;
+}
+
+.Gif-trend span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #8b8ac7
+}
+
+.Gif-trend span:hover {
+  color: #eee;
+  transition: 0.3s;
+  font-size: 14.5px;
+  text-decoration: underline;
+}
