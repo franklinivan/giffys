@@ -1,5 +1,4 @@
 import { useLocation, Link } from 'wouter'
-import './Gif.css'
 
 export const Gif = ({ title, url, id }) => {
   const [path, setLocation] = useLocation() // eslint-disable-line

@@ -47,27 +47,3 @@
   50%{background-position:82% 100%}
   100%{background-position:19% 0%}
 }
-
-.Gif-list {
-  /* background-color: #552665; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.Gif-list-item {
-  /* background-color: #1765c3; */
-  border-radius: 6px;
-  border: 2px solid #eee;
-  display: flex;
-  flex-direction: column;
-  margin: 16px;
-  width: 50%;
-  cursor: pointer;
-}
-
-.Gif-list-item h4 {
-  color: #eee;
-  text-decoration: none;
-}

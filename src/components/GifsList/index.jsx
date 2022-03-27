@@ -1,5 +1,4 @@
-import { Gif } from './Gif'
-import './Gif.css'
+import { Gif } from '../Gif'
 
 export const GifsList = ({ gifs }) => {
   return (

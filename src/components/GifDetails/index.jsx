@@ -1,4 +1,4 @@
-import { useGif } from '../hooks/useGif'
+import { useGif } from '@/hooks/useGif'
 
 export const GifDetails = ({ params }) => {
   const { keyword, id } = params

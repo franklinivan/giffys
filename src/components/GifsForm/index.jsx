@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLocation } from 'wouter'
-import './Gif.css'
+import './style.css'
 
 export const GifsForm = () => {
   const [keyword, setKeyword] = useState('')
