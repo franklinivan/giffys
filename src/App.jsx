@@ -14,16 +14,14 @@ const CONTEXT = {
 function App () {
   return (
     <StaticContext.Provider value={CONTEXT}>
-      <div className='App'>
-        <section className='App-content'>
-          <Link to='/'>
-            <h3>home</h3>
-          </Link>
-          <Route path='/' component={Home} />
-          <Route path='/gif/:keyword' component={SearchResults} />
-          <Route path='/gif/:keyword/:id' component={Details} />
-        </section>
-      </div>
+      <section className='App-content'>
+        <Link to='/'>
+          <h3>home</h3>
+        </Link>
+        <Route path='/' component={Home} />
+        <Route path='/gif/:keyword' component={SearchResults} />
+        <Route path='/gif/:keyword/:id' component={Details} />
+      </section>
     </StaticContext.Provider>
   )
 }
