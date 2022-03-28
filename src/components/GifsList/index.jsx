@@ -1,4 +1,5 @@
 import { Gif } from '../Gif'
+import './style.css'
 
 export const GifsList = ({ gifs }) => {
   return (

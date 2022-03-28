@@ -1,14 +1,57 @@
 .App-content {
-  text-align: center;
+  /* text-align: center; */
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  padding: 16px;
   color: white;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.App-content a {
+  /* background-color: rgb(50, 103, 150); */
+  color: #68d394;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 2px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/* .App-content a:hover {
+  color: #4cb879;
+  transition: 0.3s;
+  text-decoration: overline;
+} */
+
+.App-content a {
+  position: relative;
+  color: #61d390;
+  text-decoration: none;
+}
+
+.App-content a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #61d390;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.App-content a:hover::before {
+  transform: scaleX(1);
+}
+
+.App-content h3 {
+  background-color: #326796;
+  cursor: pointer;
+  display: inline-block;
 }
 
 button {
