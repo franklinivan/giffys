@@ -9,11 +9,13 @@ export const GifsForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
     setLocation(`/gif/${keyword}`)
+    setKeyword('')
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <div className='Gif-form'>
+        <h4>Giffys</h4>
         <input
           onChange={({ target }) => setKeyword(target.value)} value={keyword}
           placeholder='...'
