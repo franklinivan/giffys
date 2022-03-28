@@ -9,9 +9,7 @@ export const GifsTrending = () => {
       <h4>Trends</h4>
       {trends.map(({ title }) =>
         <Link to={`/gif/${title}`} key={title}>
-          <div>
-            <span>{title}</span>
-          </div>
+          <span>{title}</span>
         </Link>
       )}
     </div>

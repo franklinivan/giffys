@@ -48,12 +48,6 @@
   transform: scaleX(1);
 }
 
-.App-content h3 {
-  background-color: #326796;
-  cursor: pointer;
-  display: inline-block;
-}
-
 button {
   font-size: calc(10px + 2vmin);
 }

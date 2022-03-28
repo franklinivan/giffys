@@ -1,9 +1,5 @@
 .Gif-trend {
-  border-radius: 5px;
-  padding: 16px;
-  display: block;
-  text-align: left;
-  width: 90%;
+  margin: 20px;
 }
 
 .Gif-trend h4 {
@@ -11,15 +7,37 @@
   color: #eee;
 }
 
-.Gif-trend span {
-  font-size: 14px;
-  cursor: pointer;
-  color: #8b8ac7
-}
-
-.Gif-trend span:hover {
+/* .Gif-trend span:hover {
   color: #eee;
   transition: 0.3s;
   font-size: 14.5px;
   text-decoration: underline;
+} */
+
+.Gif-trend span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #8b8ac7;
+  display: block;
+  width: fit-content;
+  margin: 8px 0;
+  position: relative;
+  text-decoration: none;
+}
+
+.Gif-trend span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #8b8ac7;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.Gif-trend span:hover::before {
+  transform: scaleX(1);
 }
