@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import { useTrends } from '@/hooks/useTrends'
+import { useNearScreen } from '@/hooks/useNearScreen'
 import { Link } from 'wouter'
 import './style.css'
 
@@ -18,24 +18,11 @@ const GifsTrending = () => {
 }
 
 export const LazyTrending = () => {
-  const [show, setShow] = useState(false) // eslint-disable-line
-
-  useEffect(() => {
-    const onChange = entries => {
-      const el = entries[0]
-      if (el.isIntersecting) setShow(true)
-    }
-
-    const observer = new IntersectionObserver(onChange, { // eslint-disable-line
-      rootMargin: '100px'
-    })
-
-    observer.observe(document.getElementById('Lazy-trending'))
-  })
+  const { isNearScreen, elementRef } = useNearScreen({ distance: '100px' })
 
   return (
-    <div id='Lazy-trending'>
-      {show ? <GifsTrending /> : null}
+    <div ref={elementRef}>
+      {isNearScreen ? <GifsTrending /> : null}
     </div>
   )
 }
