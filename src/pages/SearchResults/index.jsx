@@ -9,7 +9,7 @@ export default function SearchResults ({ params }) {
   return (
     <>
       <GifsForm />
-      <GifsList gifs={gifs} />
+      <GifsList gifs={gifs} keyword={keyword} />
     </>
   )
 }

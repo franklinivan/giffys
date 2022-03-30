@@ -10,6 +10,7 @@ export const GifsForm = () => {
     e.preventDefault()
     setLocation(`/gif/${keyword}`)
     setKeyword('')
+    window.localStorage.setItem('lastSearch-keyword', keyword)
   }
 
   return (

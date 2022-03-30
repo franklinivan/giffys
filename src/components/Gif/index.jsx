@@ -1,13 +1,12 @@
-import { useLocation, Link } from 'wouter'
+import { Link } from 'wouter'
 import './style.css'
 
-export const Gif = ({ title, url, id }) => {
-  const [path, setLocation] = useLocation() // eslint-disable-line
+export const Gif = ({ title, url, id, keyword }) => {
   return (
-    <Link to={`${path}/${id}`}>
+    <Link to={`/gif/${keyword}/${id}`}>
       <div className='Gif-list-item'>
-        <h2>{title}</h2>
         <img src={url} alt={title} />
+        <p>{title}</p>
       </div>
     </Link>
   )
