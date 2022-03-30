@@ -1,7 +1,7 @@
 import { useTrends } from '@/hooks/useTrends'
 import { useNearScreen } from '@/hooks/useNearScreen'
-import { Link } from 'wouter'
 import './style.css'
+import { Trend } from '../Trend'
 
 const GifsTrending = () => {
   const { trends } = useTrends()
@@ -9,9 +9,7 @@ const GifsTrending = () => {
     <div className='Gif-trend'>
       <h4>Trends</h4>
       {trends.map(({ title }) =>
-        <Link to={`/gif/${title}`} key={title}>
-          <span>{title}</span>
-        </Link>
+        <Trend key={title} title={title} />
       )}
     </div>
   )
