@@ -1,6 +1,6 @@
 import { GifsForm } from '@/components/GifsForm'
 import { GifsList } from '@/components/GifsList'
-import { GifsTrending } from '@/components/GifsTrending'
+import { LazyTrending } from '@/components/GifsTrending'
 import { useGif } from '@/hooks/useGif'
 import './style.css'
 
@@ -15,7 +15,7 @@ export default function Home () {
         {firstTime ? null : 'Last search'}
       </p>
       <GifsList gifs={gifs} />
-      <GifsTrending />
+      <LazyTrending />
     </div>
   )
 }
