@@ -1,18 +1,21 @@
 .Gif-list-item {
+  height: 210px;
+  margin: 20px 5px 0 0;
   position: relative;
-  margin: 12px;
+  width: 210px;
 }
-.Gif-list-item h2 {
-  position: absolute;
-  font-size: 10px;
+
+.Gif-list-item p {
   background-color: rgba(0, 0, 0, 0.795);
-  width: 100%;
-  margin: 5.3px 0;
   bottom: 0;
+  font-size: 10px;
+  margin: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .Gif-list-item img {
-  width: 300px;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
+  width: 100%;
 }

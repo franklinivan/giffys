@@ -1,6 +1,5 @@
 .Gif-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
+  justify-content: space-evenly;
 }
