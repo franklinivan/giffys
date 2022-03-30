@@ -8,7 +8,5 @@ export const useTrends = () => {
     getTrendingGifs().then(trends => setTrends(trends))
   }, [])
 
-  return {
-    trends
-  }
+  return { trends }
 }

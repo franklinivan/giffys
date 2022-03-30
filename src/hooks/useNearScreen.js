@@ -21,5 +21,8 @@ export const useNearScreen = ({ distance = '100px' } = {}) => {
     return () => observer.disconnect()
   })
 
-  return { isNearScreen, elementRef }
+  return {
+    isNearScreen,
+    elementRef
+  }
 }
