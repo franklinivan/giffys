@@ -4,8 +4,8 @@ const { VITE_API_KEY } = import.meta.env
 const fromApiResponseToGifs = response => {
   const { data = [] } = response
   if (Array.isArray(data)) {
-    return data.map(({ title }) => {
-      return { title }
+    return data.map(({ title, id }) => {
+      return { title, id }
     })
   }
 }
