@@ -1,26 +1,17 @@
-import { useTrends } from '@/hooks/useTrends'
 import { useNearScreen } from '@/hooks/useNearScreen'
+import { lazy, Suspense } from 'react'
 import './style.css'
-import { Trend } from '../Trend'
 
-const GifsTrending = () => {
-  const { trends } = useTrends()
-  return (
-    <div className='Gif-trend'>
-      <h4>Trends</h4>
-      {trends.map(({ title }) =>
-        <Trend key={title} title={title} />
-      )}
-    </div>
-  )
-}
+const GifsTrending = lazy(() => import('@/components/GifsTrending/GifsTrending'))
 
 export const LazyTrending = () => {
-  const { isNearScreen, elementRef } = useNearScreen({ distance: '100px' })
+  const { isNearScreen, elementRef } = useNearScreen({ distance: '200px' })
 
   return (
     <div ref={elementRef}>
-      {isNearScreen ? <GifsTrending /> : null}
+      <Suspense fallback='loading...'>
+        {isNearScreen ? <GifsTrending /> : null}
+      </Suspense>
     </div>
   )
 }
