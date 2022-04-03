@@ -12,6 +12,7 @@ export default function SearchResults ({ params }) {
   return (
     <div className='Search-results'>
       <GifsForm />
+      <p className='Search-title'>{decodeURI(keyword)}</p>
       <GifsList gifs={gifs} keyword={keyword} />
       <button className='Search-button' onClick={handleMoreGifs}>more Gifs</button>
     </div>
