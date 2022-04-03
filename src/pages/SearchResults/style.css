@@ -3,3 +3,9 @@
   display: block;
   margin: 16px auto 0 auto;
 }
+
+.Search-title {
+  font-style: italic;
+  font-weight: 600;
+  margin-left: 10px;
+}
