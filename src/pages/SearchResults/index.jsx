@@ -5,12 +5,15 @@ import './style.css'
 
 export default function SearchResults ({ params }) {
   const { keyword } = params
-  const { gifs } = useGif({ keyword })
+  const { gifs, setPage } = useGif({ keyword })
+
+  const handleMoreGifs = () => setPage(prevPage => prevPage + 1)
 
   return (
     <div className='Search-results'>
       <GifsForm />
       <GifsList gifs={gifs} keyword={keyword} />
+      <button className='Search-button' onClick={handleMoreGifs}>more Gifs</button>
     </div>
   )
 }
