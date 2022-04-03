@@ -11,8 +11,8 @@ const fromApiResponseToGifs = response => {
   }
 }
 
-export function getGifs ({ keyword, limit = '15' } = {}) {
-  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${VITE_API_KEY}&q=${keyword}&limit=${limit}&offset=0&rating=g&lang=en`
+export function getGifs ({ keyword, limit = 15, page = 0 } = {}) {
+  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${VITE_API_KEY}&q=${keyword}&limit=${limit}&offset=${page * (limit + 1)}&rating=g&lang=en`
 
   return fetch(API_URL)
     .then(res => res.json())
