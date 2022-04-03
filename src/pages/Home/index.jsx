@@ -9,11 +9,9 @@ export default function Home () {
   const firstTime = !window.localStorage.getItem('lastSearch-keyword')
 
   return (
-    <div className='home'>
+    <div className='Home'>
       <GifsForm />
-      <p className='home-title'>
-        {firstTime ? null : 'Last search'}
-      </p>
+      <p className='Home-title'>{firstTime ? null : 'Last search'}</p>
       <GifsList gifs={gifs} />
       <LazyTrending />
     </div>
