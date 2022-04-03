@@ -8,7 +8,7 @@ export const GifsForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    setLocation(`/gif/${keyword}`)
+    setLocation(`/${keyword}`)
     setKeyword('')
     window.localStorage.setItem('lastSearch-keyword', keyword)
   }
