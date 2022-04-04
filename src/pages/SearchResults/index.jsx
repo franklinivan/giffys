@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback } from 'react'
+import { useGif } from '@/hooks/useGif'
 import { GifsForm } from '@/components/GifsForm'
 import { GifsList } from '@/components/GifsList'
-import { useGif } from '@/hooks/useGif'
 import { useNearScreen } from '@/hooks/useNearScreen'
 import throttle from 'just-throttle'
 import './style.css'
