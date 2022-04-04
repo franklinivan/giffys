@@ -14,7 +14,7 @@ export default function SearchResults ({ params }) {
 
   const thottleHandleMoreGifs = useCallback(throttle(
     () => setPage(prevPage => prevPage + 1), 200
-  ), [])
+  ), [setPage])
 
   useEffect(() => {
     if (isNearScreen) thottleHandleMoreGifs()
