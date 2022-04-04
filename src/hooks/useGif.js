@@ -3,7 +3,7 @@ import { getGifs } from '@/services/getGifs'
 const { VITE_DEFAULT_SEARCH } = import.meta.env
 const INITIAL_PAGE = 0
 
-export const useGif = ({ keyword } = {}) => {
+export function useGif ({ keyword } = {}) {
   const [gifs, setGifs] = useState([])
   const [page, setPage] = useState(INITIAL_PAGE)
   if (!keyword) keyword = window.localStorage.getItem('lastSearch-keyword') || VITE_DEFAULT_SEARCH
